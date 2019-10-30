@@ -1,26 +1,30 @@
 package com.vueApplication.VueWebShop.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
-@Table(name = "products")
+@Table(name="products")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Product {
+public class Products {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long Id;
+    @Column()
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long Id;
 
-    @Column(length=255)
+    @Column(length = 255)
     private String name;
 
-    @Column(length=255)
+    @Column(length = 255, unique = true)
     private String slug;
 
-    @Column(length=255)
+    @Column(length = 255)
     private String thumbnail;
 
     @Column(columnDefinition = "TEXT")
@@ -29,11 +33,19 @@ public class Product {
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @Column
+    @Column(precision = 10, scale = 2)
     private Double price;
 
-    public Product(String name, String slug, String thumbnail, String shortDescription, String description, Double price) {
-        Id = 0;
+     @OneToMany(cascade = CascadeType.ALL, mappedBy = "products")
+     @JsonIgnore
+     private List<ProductVariants> productVariants;
+
+    public Products() {
+        super();
+    }
+
+    public Products(String name, String slug, String thumbnail, String shortDescription, String description, Double price) {
+        super();
         this.name = name;
         this.slug = slug;
         this.thumbnail = thumbnail;
@@ -42,11 +54,11 @@ public class Product {
         this.price = price;
     }
 
-    public long getId() {
+    public Long getId() {
         return Id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         Id = id;
     }
 
@@ -97,5 +109,12 @@ public class Product {
     public void setPrice(Double price) {
         this.price = price;
     }
-}
 
+    public List<ProductVariants> getProductVariants() {
+        return productVariants;
+    }
+
+    public void setProductVariants(List<ProductVariants> productVariants) {
+        this.productVariants = productVariants;
+    }
+}
