@@ -19,13 +19,14 @@ public class Storage {
     @Column(length = 255)
     private String capacity;
 
+    // @OneToMany(cascade = CascadeType.ALL, mappedBy = "storage")
+    // @JsonIgnore
+    // private List<ProductVariants> productVariants;
 
     public Storage() {
-        super();
     }
 
     public Storage(String capacity) {
-        super();
         this.capacity = capacity;
     }
 

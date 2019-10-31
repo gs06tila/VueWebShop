@@ -14,12 +14,16 @@ public class ProductVariantIdentity implements Serializable {
     @NotNull
     private Long storageId;
 
+    @NotNull
+    private Long colourId;
+
     public ProductVariantIdentity() {
     }
 
-    public ProductVariantIdentity(Long productId, Long storageId) {
+    public ProductVariantIdentity(Long productId, Long storageId, Long colourId) {
         this.productId = productId;
         this.storageId = storageId;
+        this.colourId = colourId;
     }
 
     public Long getProductId() {
@@ -36,6 +40,14 @@ public class ProductVariantIdentity implements Serializable {
 
     public void setStorageId(Long storageId) {
         this.storageId = storageId;
+    }
+
+    public Long getColourId() {
+        return colourId;
+    }
+
+    public void setColourId(Long colourId) {
+        this.colourId = colourId;
     }
 
     @Override

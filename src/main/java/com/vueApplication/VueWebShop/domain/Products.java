@@ -36,10 +36,6 @@ public class Products {
     @Column(precision = 10, scale = 2)
     private Double price;
 
-     @OneToMany(cascade = CascadeType.ALL, mappedBy = "products")
-     @JsonIgnore
-     private List<ProductVariants> productVariants;
-
     public Products() {
         super();
     }
@@ -110,11 +106,4 @@ public class Products {
         this.price = price;
     }
 
-    public List<ProductVariants> getProductVariants() {
-        return productVariants;
-    }
-
-    public void setProductVariants(List<ProductVariants> productVariants) {
-        this.productVariants = productVariants;
-    }
 }

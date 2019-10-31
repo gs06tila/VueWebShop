@@ -25,6 +25,9 @@ public class VueWebShopApplication {
 	@Autowired
 	StorageRepository storageRepository;
 
+	@Autowired
+    ColoursRepository coloursRepository;
+
 	public static void main(String[] args) {
 		SpringApplication.run(VueWebShopApplication.class, args);
 	}
@@ -80,6 +83,14 @@ public class VueWebShopApplication {
 			storageRepository.save(st3);
 			storageRepository.save(st4);
 			storageRepository.save(st5);
+
+			Colours c1 = new Colours("Black");
+            Colours c2 = new Colours("White");
+            Colours c3 = new Colours("Green");
+
+            coloursRepository.save(c1);
+            coloursRepository.save(c2);
+            coloursRepository.save(c3);
 
 			Store s1 = new Store(
 					"findphone-växjö",
@@ -143,7 +154,7 @@ public class VueWebShopApplication {
 			storeRepository.save(s4);
 			storeRepository.save(s5);
 
-			ProductVariants pv1 = new ProductVariants(new ProductVariantIdentity(1L, 6L), 499.99);
+			ProductVariants pv1 = new ProductVariants(new ProductVariantIdentity(1L, 6L, 11L), 499.99);
 			// pv1.setStorage(st1);
 			productVariantsRepository.save(pv1);
 

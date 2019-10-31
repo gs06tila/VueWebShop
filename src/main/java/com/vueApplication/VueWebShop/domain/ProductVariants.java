@@ -17,8 +17,8 @@ public class ProductVariants {
     @Column(precision = 10, scale = 2)
     private Double price;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Products products;
+    // @ManyToOne(fetch = FetchType.LAZY)
+    // private Storage storage;
 
     public ProductVariants() {
     }
