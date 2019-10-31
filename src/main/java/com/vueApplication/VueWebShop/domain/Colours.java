@@ -5,20 +5,30 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "AspNetRoles")
+@Table(name="colour")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class AppRole {
+public class Colours {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long roleId;
+    private long Id;
 
-    @Column(length=128, nullable = false, updatable = false)
+    @Column(length = 255)
     private String name;
 
-    public AppRole(String name) {
-        roleId = 0;
+    public Colours() {
+    }
+
+    public Colours(String name) {
         this.name = name;
+    }
+
+    public long getId() {
+        return Id;
+    }
+
+    public void setId(long id) {
+        Id = id;
     }
 
     public String getName() {
