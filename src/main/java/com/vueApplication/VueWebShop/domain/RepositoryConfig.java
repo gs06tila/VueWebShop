@@ -8,6 +8,6 @@ import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapt
 public class RepositoryConfig  extends RepositoryRestConfigurerAdapter {
     @Override
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-        config.exposeIdsFor(Products.class);
+        config.exposeIdsFor(Product.class);
     }
 }
