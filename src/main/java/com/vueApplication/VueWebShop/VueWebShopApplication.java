@@ -44,25 +44,25 @@ public class VueWebShopApplication {
 					"http://placehold.it/200x300",
 					"HTC U11 Android smartphone with built-in Amazon Alexa",
 					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora ad cum laudantium, omnis fugit amet iure animi corporis labore repellat magnam perspiciatis explicabo maiores fuga provident a obcaecati tenetur nostrum, quidem quod dignissimos, voluptatem quasi? Nisi quaerat, fugit voluptas ducimus facilis impedit quod dicta, laborum sint iure nihil veniam aspernatur delectus officia culpa, at cupiditate? Totam minima ut deleniti laboriosam dolores cumque in, nesciunt optio! Quod recusandae voluptate facere pariatur soluta vel corrupti tenetur aut maiores, cumque mollitia fugiat laudantium error odit voluptas nobis laboriosam quo, rem deleniti? Iste quidem amet perferendis sed iusto tempora modi illo tempore quibusdam laborum? Dicta aliquam libero, facere, maxime corporis qui officiis explicabo aspernatur non consequatur mollitia iure magnam odit enim. Eligendi suscipit, optio officiis repellat eos quis iure? Omnis, error aliquid quibusdam iste amet nihil nisi cumque magni sequi enim illo autem nesciunt optio accusantium animi commodi tenetur neque eum vitae est.",
-					499.99);
+					599.99);
 			Product p3 = new Product("Samsung Galaxy S9",
 					"samsung-galaxy-s9",
 					"http://placehold.it/200x300",
 					"Samsung Galaxy S9 Android smartphone with true edge to edge display",
 					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora ad cum laudantium, omnis fugit amet iure animi corporis labore repellat magnam perspiciatis explicabo maiores fuga provident a obcaecati tenetur nostrum, quidem quod dignissimos, voluptatem quasi? Nisi quaerat, fugit voluptas ducimus facilis impedit quod dicta, laborum sint iure nihil veniam aspernatur delectus officia culpa, at cupiditate? Totam minima ut deleniti laboriosam dolores cumque in, nesciunt optio! Quod recusandae voluptate facere pariatur soluta vel corrupti tenetur aut maiores, cumque mollitia fugiat laudantium error odit voluptas nobis laboriosam quo, rem deleniti? Iste quidem amet perferendis sed iusto tempora modi illo tempore quibusdam laborum? Dicta aliquam libero, facere, maxime corporis qui officiis explicabo aspernatur non consequatur mollitia iure magnam odit enim. Eligendi suscipit, optio officiis repellat eos quis iure? Omnis, error aliquid quibusdam iste amet nihil nisi cumque magni sequi enim illo autem nesciunt optio accusantium animi commodi tenetur neque eum vitae est.",
-					499.99);
+					699.99);
 			Product p4 = new Product("Samsung Galaxy S10",
 					"samsung-galaxy-s10",
 					"http://placehold.it/200x300",
 					"Samsung Galaxy S10 Android smartphone with true edge to edge display",
 					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora ad cum laudantium, omnis fugit amet iure animi corporis labore repellat magnam perspiciatis explicabo maiores fuga provident a obcaecati tenetur nostrum, quidem quod dignissimos, voluptatem quasi? Nisi quaerat, fugit voluptas ducimus facilis impedit quod dicta, laborum sint iure nihil veniam aspernatur delectus officia culpa, at cupiditate? Totam minima ut deleniti laboriosam dolores cumque in, nesciunt optio! Quod recusandae voluptate facere pariatur soluta vel corrupti tenetur aut maiores, cumque mollitia fugiat laudantium error odit voluptas nobis laboriosam quo, rem deleniti? Iste quidem amet perferendis sed iusto tempora modi illo tempore quibusdam laborum? Dicta aliquam libero, facere, maxime corporis qui officiis explicabo aspernatur non consequatur mollitia iure magnam odit enim. Eligendi suscipit, optio officiis repellat eos quis iure? Omnis, error aliquid quibusdam iste amet nihil nisi cumque magni sequi enim illo autem nesciunt optio accusantium animi commodi tenetur neque eum vitae est.",
-					499.99);
+					199.99);
 			Product p5 = new Product("Apple iPhone 11PRO",
 					"apple-iphone-11-pro",
 					"http://placehold.it/200x300",
 					"Apple iPhone 11PRO IOS smartphone with awesome camera and bright display",
 					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis tempora ad cum laudantium, omnis fugit amet iure animi corporis labore repellat magnam perspiciatis explicabo maiores fuga provident a obcaecati tenetur nostrum, quidem quod dignissimos, voluptatem quasi? Nisi quaerat, fugit voluptas ducimus facilis impedit quod dicta, laborum sint iure nihil veniam aspernatur delectus officia culpa, at cupiditate? Totam minima ut deleniti laboriosam dolores cumque in, nesciunt optio! Quod recusandae voluptate facere pariatur soluta vel corrupti tenetur aut maiores, cumque mollitia fugiat laudantium error odit voluptas nobis laboriosam quo, rem deleniti? Iste quidem amet perferendis sed iusto tempora modi illo tempore quibusdam laborum? Dicta aliquam libero, facere, maxime corporis qui officiis explicabo aspernatur non consequatur mollitia iure magnam odit enim. Eligendi suscipit, optio officiis repellat eos quis iure? Omnis, error aliquid quibusdam iste amet nihil nisi cumque magni sequi enim illo autem nesciunt optio accusantium animi commodi tenetur neque eum vitae est.",
-					499.99);
+					899.99);
 
 			repository.save(p1);;
 			repository.save(p2);
@@ -70,11 +70,11 @@ public class VueWebShopApplication {
 			repository.save(p4);
 			repository.save(p5);
 
-			Storage st1 = new Storage("test Capacity1");
-			Storage st2 = new Storage("test Capacity2");
-			Storage st3 = new Storage("test Capacity3");
-			Storage st4 = new Storage("test Capacity4");
-			Storage st5 = new Storage("test Capacity5");
+			Storage st1 = new Storage("32GB");
+			Storage st2 = new Storage("64GB");
+			Storage st3 = new Storage("86GB");
+			Storage st4 = new Storage("120GB");
+			Storage st5 = new Storage("12GB");
 
 			storageRepository.save(st1);
 			storageRepository.save(st2);
@@ -85,10 +85,12 @@ public class VueWebShopApplication {
 			Colour c1 = new Colour("Black");
             Colour c2 = new Colour("White");
             Colour c3 = new Colour("Green");
+			Colour c4 = new Colour("Gold");
 
             coloursRepository.save(c1);
             coloursRepository.save(c2);
             coloursRepository.save(c3);
+			coloursRepository.save(c4);
 
 			Store s1 = new Store(
 					"findphone-växjö",
@@ -151,6 +153,13 @@ public class VueWebShopApplication {
 			storeRepository.save(s3);
 			storeRepository.save(s4);
 			storeRepository.save(s5);
+
+			ProductVariant pv1 = new ProductVariant(499.99, p1, st1, c1);
+			ProductVariant pv2 = new ProductVariant(599.99, p2, st2, c1);
+			ProductVariant pv3 = new ProductVariant(699.99, p3, st3, c2);
+			ProductVariant pv4 = new ProductVariant(199.99, p4, st4, c3);
+			ProductVariant pv5 = new ProductVariant(899.99, p5, st5, c4);
+
 
 			//ProductVariant pv1 = new ProductVariant(new ProductVariantIdentity(1L, 6L, 11L), 499.99);
 			// pv1.setStorage(st1);
